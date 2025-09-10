@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Star, MapPin, Phone, Mail, Globe, ExternalLink, CheckCircle, AlertTriangle, Award, Shield, Calendar, Clock, CreditCard, Users, Target } from 'lucide-react';
 import StarRating from '../components/common/StarRating';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -9,6 +9,7 @@ import MetaTags from '../components/MetaTags';
 
 const CB1MedicalReviewPage: React.FC = () => {
   const navigate = useNavigate();
+  const { slug } = useParams<{ slug: string }>();
 
   const clinicData = {
     name: 'CB1 Medical',
