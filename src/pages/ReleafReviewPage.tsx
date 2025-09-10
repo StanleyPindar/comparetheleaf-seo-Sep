@@ -1,15 +1,15 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Star, MapPin, Phone, Mail, Globe, ExternalLink, CheckCircle, AlertTriangle, Award, Shield, Calendar, Clock, CreditCard, Users, Target } from 'lucide-react';
 import StarRating from '../components/common/StarRating';
 import Breadcrumbs from '../components/Breadcrumbs';
 import MedicalDisclaimer from '../components/MedicalDisclaimer';
 import { generateClinicMetaDescription } from '../utils/metaDescriptionGenerator';
 import MetaTags from '../components/MetaTags';
-import { useParams } from 'react-router-dom';
 
 const ReleafReviewPage: React.FC = () => {
   const navigate = useNavigate();
+  const { slug } = useParams<{ slug: string }>();
 
   const clinicData = {
     name: 'Releaf',
