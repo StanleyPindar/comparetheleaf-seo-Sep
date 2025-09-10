@@ -30,7 +30,6 @@ export const getAllReviews = async (): Promise<Review[]> => {
     const { data, error } = await supabase
       .from('clinics')
       .select('*')
-      .eq('review_published', true)
       .not('slug', 'is', null)
       .order('updated_at', { ascending: false });
 
@@ -86,7 +85,6 @@ export const getReviewBySlug = async (slug: string): Promise<Review | null> => {
       .from('clinics')
       .select('*')
       .eq('slug', slug)
-      .eq('review_published', true)
       .maybeSingle();
 
     if (error) {

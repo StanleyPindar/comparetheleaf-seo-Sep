@@ -32,7 +32,6 @@ const ClinicReviewPage = () => {
         .from('clinics')
         .select('*')
         .eq('slug', reviewSlug)
-        .eq('review_published', true)
         .maybeSingle();
 
       if (error) throw error;
