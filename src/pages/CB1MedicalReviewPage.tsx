@@ -10,7 +10,6 @@ import MetaTags from '../components/MetaTags';
 const CB1MedicalReviewPage: React.FC = () => {
   const navigate = useNavigate();
   const { slug } = useParams<{ slug: string }>();
-  const { slug } = useParams<{ slug: string }>();
 
   const clinicData = {
     name: 'CB1 Medical',
